@@ -23,7 +23,7 @@ type Service struct{
 }
 
 //New -return new rocket service
-func New() Service{
+func New(store Store) Service{
 
 	return Service{
 
