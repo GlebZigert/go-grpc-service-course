@@ -15,6 +15,7 @@ type Rocket struct{
 	ID string
 	Name string
 	Type string
+	Flights int
 }
 
 //Service - our rocket service, used for updating our rocket 
@@ -43,7 +44,7 @@ type Store interface{
 	InsertRocket(rkt Rocket) (Rocket, error)
 	DeleteRocket(id string) error
 }
-
+// GetRocketByID - retrieves a rocket based on the ID from the store
 func (s Service) GetRocketByID(ctx context.Context, id string) (Rocket, error) {
 
 	rkt,err := s.Store.GetRocketByID(id)
@@ -54,7 +55,8 @@ func (s Service) GetRocketByID(ctx context.Context, id string) (Rocket, error) {
 	return rkt, nil
 }
 
-func (s Service)InsertRocket(ctx context.Context,rkt Rocket) (Rocket, error){
+// InsertRocket - insert a new rocket into the store
+func (s Service)InsertRocket(ctx context.Context,rkt Rocket) (Rocket, error) {
 
 	rkt,err := s.Store.InsertRocket(rkt)
 	if  err != nil {
@@ -64,6 +66,7 @@ func (s Service)InsertRocket(ctx context.Context,rkt Rocket) (Rocket, error){
 	return rkt, nil	
 }
 
+// DeleteRocket - deletes a rocket from our inventary
 func (s Service) DeleteRocket(id string) error {
 
 	err := s.Store.DeleteRocket(id)
