@@ -44,7 +44,7 @@ type Store interface{
 func (s Service) GetRocketByID(id string) (Rocket, error) {
 
 	rkt,err := s.Store.GetRocketByID(id)
-	if  err !=0 {
+	if  err != nil {
 		return Rocket{}, err
 	}
 
