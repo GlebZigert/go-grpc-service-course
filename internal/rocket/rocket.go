@@ -42,7 +42,7 @@ type Store interface{
 	DeleteRocket(id string) error
 }
 
-func (s Service) GetRocketByID(ctx context.Context, ,id string) (Rocket, error) {
+func (s Service) GetRocketByID(ctx context.Context, id string) (Rocket, error) {
 
 	rkt,err := s.Store.GetRocketByID(id)
 	if  err != nil {
