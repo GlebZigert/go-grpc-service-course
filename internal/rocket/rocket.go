@@ -1,5 +1,6 @@
-//go:generate /home/administrator/go/bin/mockgen -package=rocket github.com/GlebZigert/go-grpc-service-course/internal/rocket Store
+//go:generate /home/administrator/go/bin/mockgen -destination=/home/administrator/go-grpc-services-course/rocket_mocks_test.go -package=rocket github.com/GlebZigert/go-grpc-service-course/internal/rocket Store
 
+//go generate ./...
 package rocket
 
 // Rocket - should contain things like
