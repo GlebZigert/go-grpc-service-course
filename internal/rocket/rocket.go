@@ -1,4 +1,4 @@
-//go:generate /home/administrator/go/bin/mockgen -destination=/home/administrator/go-grpc-services-course/rocket_mocks_test.go -package=rocket github.com/GlebZigert/go-grpc-service-course/internal/rocket Store
+//go:generate /home/administrator/go/bin/mockgen -destination=./rocket_mocks_test.go -package=rocket github.com/GlebZigert/go-grpc-service-course/internal/rocket Store
 
 //go generate ./...
 package rocket
@@ -10,7 +10,7 @@ package rocket
 
 type Rocket struct{
 
-	ID int
+	ID string
 	Name string
 	Type string
 }
