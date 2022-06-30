@@ -3,6 +3,8 @@
 //go generate ./...
 package rocket
 
+import "context"
+
 // Rocket - should contain things like
 // ID of the rocket,
 // the name of the rocket
