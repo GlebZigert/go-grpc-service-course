@@ -9,9 +9,9 @@ package rocket
 
 type Rocket struct{
 
-	ID int,
-	name string,
-	type string
+	ID int
+	Name string
+	Type string
 }
 
 //Service - our rocket service, used for updating our rocket 
