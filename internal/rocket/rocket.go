@@ -43,7 +43,8 @@ type Store interface{
 
 func (s Service) GetRocketByID(id string) (Rocket, error) {
 
-	if rkt,err := s.Store.GetRocketByID(id); err !=0 {
+	rkt,err := s.Store.GetRocketByID(id)
+	if  err !=0 {
 		return Rocket{}, err
 	}
 
@@ -52,7 +53,8 @@ func (s Service) GetRocketByID(id string) (Rocket, error) {
 
 func (s Service) InsertRocket(rkt Rocket) (Rocket, error){
 
-	if rkt,err := s.Store.InsertRocket(id); err !=0 {
+	rkt,err := s.Store.InsertRocket(id)
+	if  err !=0 {
 		return Rocket{}, err
 	}
 
@@ -61,7 +63,8 @@ func (s Service) InsertRocket(rkt Rocket) (Rocket, error){
 
 func (s Service) DeleteRocket(id string) error {
 
-	if err := s.Store.DeleteRocket(id); err != nil {
+	err := s.Store.DeleteRocket(id)
+	if err != nil {
 
 		return err
 	}
