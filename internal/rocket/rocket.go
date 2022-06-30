@@ -54,7 +54,7 @@ func (s Service) GetRocketByID(id string) (Rocket, error) {
 func (s Service) AddRocket(rkt Rocket) (Rocket, error){
 
 	rkt,err := s.Store.InsertRocket(rkt)
-	if  err !=0 {
+	if  err != nil {
 		return Rocket{}, err
 	}
 
